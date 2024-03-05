@@ -14,15 +14,16 @@ Welcome to the FastAPI Template Project! This project is designed to provide a s
 
 ### Prerequisites
 
-- Python 3.7 or higher
+- Python 3.11 or higher
 - PostgreSQL (or you can adjust the database settings for your preferred database)
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Amirshox/FastapiTemplate.git
-   cd FastapiTemplate
+```bash
+git clone https://github.com/Amirshox/FastapiTemplate.git
+cd FastapiTemplate
+ ```
 
 
 ### Install the required dependencies:
