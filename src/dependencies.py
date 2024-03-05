@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from src.core.unitofwork import IUnitOfWork, UOW
+from src.core.unitofwork import UOW, IUnitOfWork
 from src.db import async_session_maker
 
 

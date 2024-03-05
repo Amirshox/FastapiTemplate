@@ -8,7 +8,7 @@ class UsersService:
         async with uow:
             if await uow.users.find_one(username=user.username):
                 return False
-            
+
             user_id = await uow.users.add_one(user_dict)
             await uow.commit()
             return user_id
@@ -17,13 +17,12 @@ class UsersService:
         async with uow:
             users = await uow.users.find_all()
             return users
-    
+
     async def get_user(self, id: int, uow: IUnitOfWork):
         async with uow:
             user = await uow.users.find_one(id=id)
             return user
 
-    
     async def delete_user(self, id: int, uow: IUnitOfWork):
         async with uow:
             if not await uow.users.find_one(id=id):
@@ -32,8 +31,7 @@ class UsersService:
             response = await uow.users.delete_one(id=id)
             await uow.commit()
             return response
-        
-    
+
     async def edit_user(self, id: int, user: UserSchemaEdit, uow: IUnitOfWork):
         user_dict = user.model_dump()
         async with uow:

@@ -1,10 +1,3 @@
-from .users import (
-    UserSchema, 
-    UserSchemaAdd, 
-    UserSchemaEdit, 
-    UserGetResponse,
-    UsersGetResponse,
-    UserCreateResponse,
-    UserDeleteResponse,
-    UserEditResponse
-)
+from .users import (UserCreateResponse, UserDeleteResponse, UserEditResponse,
+                    UserGetResponse, UserSchema, UserSchemaAdd, UserSchemaEdit,
+                    UsersGetResponse)

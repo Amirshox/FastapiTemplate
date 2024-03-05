@@ -6,7 +6,7 @@ from src.core.repositories.users import UsersRepository
 
 class IUnitOfWork(ABC):
     users: Type[UsersRepository]
-    
+
     @abstractmethod
     def __init__(self, session_factory: Any):
         ...

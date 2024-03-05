@@ -1,11 +1,11 @@
-import dotenv
 import os
 
+import dotenv
 from fastapi import FastAPI
 
-from src.dependencies import init_dependencies
 from src.api import root_router
 from src.core import settings
+from src.dependencies import init_dependencies
 
 
 def init_routers(app: FastAPI):
@@ -13,10 +13,7 @@ def init_routers(app: FastAPI):
 
 
 def create_app():
-    app = FastAPI(
-        title=settings.app_title,
-        version=settings.version
-    )
+    app = FastAPI(title=settings.app_title, version=settings.version)
     init_routers(app)
     init_dependencies(app)
     return app
